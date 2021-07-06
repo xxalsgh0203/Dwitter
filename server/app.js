@@ -11,7 +11,7 @@ app.use(helmet());
 app.use(cors());
 app.use(morgan('tiny'));
 
-app.use('/tweets', tweetsRoute);
+app.use('/tweets', tweetsRouter);
 
 app.use((req, res, next) => {
     res.sendStatus(404);
