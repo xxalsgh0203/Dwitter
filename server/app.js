@@ -1,11 +1,11 @@
 import express from 'express';
-import cores from 'cores';
+import cors from 'cors';
 import morgan from 'morgan';
-import helmet, { crossOriginEmbedderPolicy } from 'helmet';
+import helmet from 'helmet';
 import 'express-async-errors'
-import tweetsRouter from './router/tweets.js';
+import tweetsRouter from './router/tweet.js';
 
-const app = expresss();
+const app = express();
 app.use(express.json());
 app.use(helmet());
 app.use(cors());
